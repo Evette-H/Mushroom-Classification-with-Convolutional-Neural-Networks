@@ -57,8 +57,11 @@ recommended.
 ---
 
 ## Repository Structure
+
+```text
 .
 ├── notebooks/      # Training and evaluation notebooks
 ├── src/            # Model and data loading code
 ├── .gitignore
 └── README.md
+
