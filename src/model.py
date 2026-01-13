@@ -11,10 +11,9 @@ class Classifier(nn.Module):
     def __init__(self, num_classes=10,freeze_backbone=True): 
         super().__init__()
         
-        self.model = torchvision.models.resnet18(weights=torchvision.models.ResNet18_Weights.DEFAULT)
+        self.model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
 
         # Replace last layer for 10 classes
-        self.model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
         in_features = self.model.fc.in_features
         self.model.fc = nn.Linear(in_features, num_classes)
 
